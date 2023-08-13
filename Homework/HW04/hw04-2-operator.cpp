@@ -6,39 +6,26 @@
 int main() {
     int a = 0, b = 0;
     printf("Please enter value (a b) : ");
-    scanf("%d %d", &a, &b); // Input variable 'a' and 'b'
+    scanf("%d %d", &a, &b); // TODO: #11 Input variable 'a' and 'b'
 
-    // Displaying the entered values
+    // TODO: #12 Complete operator, and display all operator output. (and fix all bugs.)
     printf("a = %d , b = %d \n", a, b);
-    
-    // Arithmetic operations
     printf("a + b = %d \n", a + b);
     printf("a - b = %d \n", a - b);
-    printf("a * b = %d \n", a * b);
-    
-    // Division operation with a check for b not being zero
-    printf("a / b = %d (b must be greater than 0)\n", b != 0 ? a / b : 0);
-    
-    // Modulo operation
-    printf("a %% b = %d \n", a % b);
-    
-    // Increment and decrement operations
-    printf("++a = %d \n", ++a);
-    printf("a-- = %d \n", a--);
-    
-    // Compound assignment operations
-    printf("a += 1 %d \n", a += 1);
-    printf("a += b %d \n", a += b);
-    printf("a -= 1 %d \n", a -= 1);
-    printf("a -= b %d \n", a -= b);
-    printf("a *= 1 %d \n", a *= 1);
-    printf("a *= b %d \n", a *= b);
-    printf("a %%= 1 %d \n", a %= 1);
-    printf("a %%= b %d \n", a %= b);
-    
-    // Logical operations
-    printf("a && b %d \n", a && b);
-    printf("a || b %d \n", a || b);
-    
+    printf("a * b = %d \n", a * b); // Missing semicolon at the end of the line
+    printf("a / b = %d (b must greater than 0)\n", b > 0 ? a / b : 0); // Corrected the ternary expression
+    printf("a %% b = %d \n", a % b); // Escaped '%' by using '%%'
+    printf("++a = %d \n", ++a); // Increment 'a' before printing
+    printf("a-- = %d \n", a--); // Print 'a' and then decrement it
+    printf("a += 1 %d \n", a += 1); // Increment 'a' by 1
+    printf("a += b %d \n", a += b); // Increment 'a' by 'b'
+    printf("a -= 1 %d \n", a -= 1); // Decrement 'a' by 1
+    printf("a -= b %d \n", a -= b); // Decrement 'a' by 'b'
+    printf("a *= 1 %d \n", a *= 1); // Multiply 'a' by 1
+    printf("a *= b %d \n", a *= b); // Multiply 'a' by 'b'
+    printf("a %%= 1 %d \n", a %= 1); // Modulo 'a' by 1
+    printf("a %%= b %d \n", a %= b); // Modulo 'a' by 'b'
+    printf("a && b %d \n", a && b); // Logical AND between 'a' and 'b'
+    printf("a || b %d \n", a || b); // Logical OR between 'a' and 'b'
     return 0;
 }
